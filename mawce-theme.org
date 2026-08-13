@@ -1,0 +1,691 @@
+#+title: Mawce Theme Notes
+
+
+* Elfeed Faces
+ - elfeed-log-error-level-face 
+ - elfeed-log-info-level-face 
+ - elfeed-log-warn-level-face 
+ - elfeed-search-date-face :: The face used for the timestamp in elfeed-search
+ - elfeed-search-tag-face :: The tags for the entries in elfeed-search
+ - elfeed-search-feed-face :: The face for the name of the feed in elfeed-search
+ - elfeed-search-title-face :: The face used for the title of the page in elfeed-search
+ - elfeed-search-unread-title-face :: The face used for the title of the page in elfeed-search when the entry is "unread"
+ - hl-fine :: alters the selected line
+
+
+1. 
+ elfeed-log-error-level-face ((t (:foreground ,zenburn-red))))
+ elfeed-log-info-level-face ((t (:foreground ,zenburn-blue))))
+ elfeed-log-warn-level-face ((t (:foreground ,zenburn-yellow))))
+ elfeed-search-date-face ((t (:foreground ,zenburn-yellow-1 :underline t :weight bold))))
+ elfeed-search-tag-face ((t (:foreground ,zenburn-green))))
+ elfeed-search-feed-face ((t (:foreground ,zenburn-cyan))))
+ elfeed-search-title-face ((t (:foreground ,zenburn-fg-05))))
+ elfeed-search-unread-title-face ((t (:foreground ,zenburn-fg :weight bold))))
+
+ 
+*** Dark Theme Colors 
+
+ | Face                            | Hex      | Palette             |
+ |---------------------------------+----------+---------------------|
+ | elfeed-search-date-face         | "#aebbec | mawce-light-273     |
+ | elfeed-search-unread-title-face | "#d8d8d8 | mawce-grayscales-88 |
+ | elfeed-search-feed-face         | "#d4ba8a | mawce-light-083     |
+ | elfeed-search-tag-face          | "#b5c694 | mawce-light-123     |
+
+*** Light Theme Colors
+| Face                            | Hex     | Palette             |
+|---------------------------------+---------+---------------------|
+| elfeed-search-date-face         | #2a5473 | mawce-dark-273      |
+| elfeed-search-unread-title-face | #292929 | mawce-grayscales-28 |
+| elfeed-search-feed-face         | #624c1d | mawce-dark-083      |
+| elfeed-search-tag-face          | #485629 | mawce-dark-123      |
+
+* Desaturated colors
+** Backgrounds
+#+name: backgrounds
+| name                        | hex     |
+|-----------------------------+---------+
+| mawce-dark-background-022   | #2a1716 |
+| mawce-dark-background-052   | #29190f |
+| mawce-dark-background-082   | #241c0b |
+| mawce-dark-background-112   | #1d1f0c |
+| mawce-dark-background-142   | #142113 |
+| mawce-dark-background-172   | #0b221b |
+| mawce-dark-background-202   | #072123 |
+| mawce-dark-background-232   | #0c2029 |
+| mawce-dark-background-262   | #151d2c |
+| mawce-dark-background-292   | #1d1a2b |
+| mawce-dark-background-322   | #241826 |
+| mawce-dark-background-352   | #29171f |
+| mawce-medium-background-022 | #79615f |
+| mawce-medium-background-052 | #766357 |
+| mawce-medium-background-082 | #706653 |
+| mawce-medium-background-112 | #676955 |
+| mawce-medium-background-142 | #5d6c5c |
+| mawce-medium-background-172 | #586d62 |
+| mawce-medium-background-202 | #526d6f |
+| mawce-medium-background-232 | #566b76 |
+| mawce-medium-background-262 | #5e687a |
+| mawce-medium-background-292 | #676478 |
+| mawce-medium-background-322 | #706272 |
+| mawce-medium-background-352 | #766069 |
+| mawce-light-background-022  | #d1b6b4 |
+| mawce-light-background-052  | #ceb8ab |
+| mawce-light-background-082  | #c7bca7 |
+| mawce-light-background-112  | #bdc0a9 |
+| mawce-light-background-142  | #b3c3b0 |
+| mawce-light-background-172  | #aac4bb |
+| mawce-light-background-202  | #a7c4c6 |
+| mawce-light-background-232  | #aac1ce |
+| mawce-light-background-262  | #b3bed2 |
+| mawce-light-background-292  | #bdbad0 |
+| mawce-light-background-322  | #c7b7c9 |
+| mawce-light-background-352  | #ceb6bf |
+| mawce-grayscales-98         | #f9f9f9 |
+| mawce-grayscales-88         | #d8d8d8 |
+| mawce-grayscales-78         | #b7b7b7 |
+| mawce-grayscales-68         | #989898 |
+| mawce-grayscales-58         | #7a7a7a |
+| mawce-grayscales-48         | #5e5e5e |
+| mawce-grayscales-38         | #434343 |
+| mawce-grayscales-28         | #292929 |
+| mawce-grayscales-18         | #121212 |
+| mawce-grayscales-08         | #020202 |
+| mawce-bluescale-000         | #3f3f3f |
+| mawce-bluescale-001         | #3c3f47 |
+| mawce-bluescale-002         | #393e4f |
+| mawce-bluescale-003         | #373e57 |
+| mawce-bluescale-004         | #343d5f |
+| mawce-bluescale-005         | #323c66 |
+| mawce-bluescale-006         | #2f3a6d |
+| mawce-bluescale-007         | #2d3975 |
+| mawce-bluescale-008         | #2b377c |
+| mawce-bluescale-009         | #293484 |
+| mawce-bluescale-010         | #28318b |
+
+#+begin_src emacs-lisp :var TESTCOLOR="#79615f" :results code 
+  (ct-get-lch TESTCOLOR) ;; (ct-edit-lch-c TESTCOLOR .1)
+
+#+end_src
+
+#+RESULTS:
+#+begin_src emacs-lisp
+(43.42033018731127 10.51110632034436 27.212078075569412)
+#+end_src
+
+
+** Backgrounds saturated
+| name                        | oklch               | oklch           |
+|-----------------------------+---------------------+-----------------|
+| mawce-dark-background-022   | oklch(23% 0.1 23);  | #23,0.1,23,100  |
+| mawce-dark-background-052   | oklch(23% 0.1 53);  | #23,0.1,53,100  |
+| mawce-dark-background-082   | oklch(23% 0.1 85);  | #23,0.1,85,100  |
+| mawce-dark-background-112   | oklch(23% 0.1 110); | #23,0.1,110,100 |
+| mawce-dark-background-142   | oklch(23% 0.1 140); | #23,0.1,140,100 |
+| mawce-dark-background-172   | oklch(23% 0.1 170); | #23,0.1,170,100 |
+| mawce-dark-background-202   | oklch(23% 0.1 200); | #23,0.1,200,100 |
+| mawce-dark-background-232   | oklch(23% 0.1 230); | #23,0.1,230,100 |
+| mawce-dark-background-262   | oklch(23% 0.1 260); | #23,0.1,260,100 |
+| mawce-dark-background-292   | oklch(23% 0.1 290); | #23,0.1,290,100 |
+| mawce-dark-background-322   | oklch(23% 0.1 320); | #23,0.1,320,100 |
+| mawce-dark-background-352   | oklch(23% 0.1 350); | #23,0.1,350,100 |
+| mawce-medium-background-022 | oklch(52% 0.1 24);  | #52,0.1,24,100  |
+| mawce-medium-background-052 | oklch(51% 0.1 54);  | #51,0.1,54,100  |
+| mawce-medium-background-082 | oklch(51% 0.1 83);  | #51,0.1,83,100  |
+| mawce-medium-background-112 | oklch(51% 0.1 110); | #51,0.1,110,100 |
+| mawce-medium-background-142 | oklch(51% 0.1 140); | #51,0.1,140,100 |
+| mawce-medium-background-172 | oklch(51% 0.1 160); | #51,0.1,160,100 |
+| mawce-medium-background-202 | oklch(51% 0.1 200); | #51,0.1,200,100 |
+| mawce-medium-background-232 | oklch(51% 0.1 230); | #51,0.1,230,100 |
+| mawce-medium-background-262 | oklch(52% 0.1 260); | #52,0.1,260,100 |
+| mawce-medium-background-292 | oklch(51% 0.1 290); | #51,0.1,290,100 |
+| mawce-medium-background-322 | oklch(52% 0.1 320); | #52,0.1,320,100 |
+| mawce-medium-background-352 | oklch(51% 0.1 350); | #51,0.1,350,100 |
+| mawce-light-background-022  | oklch(80% 0.1 23);  | #80,0.1,23,100  |
+| mawce-light-background-052  | oklch(80% 0.1 53);  | #80,0.1,53,100  |
+| mawce-light-background-082  | oklch(80% 0.1 84);  | #80,0.1,84,100  |
+| mawce-light-background-112  | oklch(80% 0.1 110); | #80,0.1,110,100 |
+| mawce-light-background-142  | oklch(80% 0.1 140); | #80,0.1,140,100 |
+| mawce-light-background-172  | oklch(80% 0.1 170); | #80,0.1,170,100 |
+| mawce-light-background-202  | oklch(80% 0.1 200); | #80,0.1,200,100 |
+| mawce-light-background-232  | oklch(80% 0.1 230); | #80,0.1,230,100 |
+| mawce-light-background-262  | oklch(80% 0.1 260); | #80,0.1,260,100 |
+| mawce-light-background-292  | oklch(80% 0.1 290); | #80,0.1,290,100 |
+| mawce-light-background-322  | oklch(80% 0.1 320); | #80,0.1,320,100 |
+| mawce-light-background-352  | oklch(80% 0.1 350); | #80,0.1,350,100 |
+| mawce-grayscales-98         | oklch(98% 0.1 0);   | #98,0.1,0,100   |
+| mawce-grayscales-88         | oklch(88% 0.1 0);   | #88,0.1,0,100   |
+| mawce-grayscales-78         | oklch(78% 0.1 0);   | #78,0.1,0,100   |
+| mawce-grayscales-68         | oklch(68% 0.1 0);   | #68,0.1,0,100   |
+| mawce-grayscales-58         | oklch(58% 0.1 0);   | #58,0.1,0,100   |
+| mawce-grayscales-48         | oklch(48% 0.1 0);   | #48,0.1,0,100   |
+| mawce-grayscales-38         | oklch(38% 0.1 0);   | #38,0.1,0,100   |
+| mawce-grayscales-28         | oklch(28% 0.1 0);   | #28,0.1,0,100   |
+| mawce-grayscales-18         | oklch(18% 0.1 0);   | #18,0.1,0,100   |
+| mawce-grayscales-08         | oklch(8.5% 0.1 0);  | #8.5,0.1,0,100  |
+| mawce-bluescale-000         | oklch(37% 0.1 0);   | #37,0.1,0,100   |
+| mawce-bluescale-001         | oklch(37% 0.1 270); | #37,0.1,270,100 |
+| mawce-bluescale-002         | oklch(37% 0.1 270); | #37,0.1,270,100 |
+| mawce-bluescale-003         | oklch(37% 0.1 270); | #37,0.1,270,100 |
+| mawce-bluescale-004         | oklch(37% 0.1 270); | #37,0.1,270,100 |
+| mawce-bluescale-005         | oklch(37% 0.1 270); | #37,0.1,270,100 |
+| mawce-bluescale-006         | oklch(37% 0.1 270); | #37,0.1,270,100 |
+| mawce-bluescale-007         | oklch(37% 0.1 270); | #37,0.1,270,100 |
+| mawce-bluescale-008         | oklch(37% 0.1 270); | #37,0.1,270,100 |
+| mawce-bluescale-009         | oklch(37% 0.1 270); | #37,0.1,270,100 |
+| mawce-bluescale-010         | oklch(37% 0.1 270); | #37,0.1,270,100 |
+
+#+begin_src sh :results raw drawer
+  curl https://oklch.com/#80,0.1,260,100
+#+end_src
+
+#+RESULTS:
+:results:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>OKLCH Color Picker &amp; Converter</title><link rel="preload" href="/MartianMono-1.0.0-BAPe8MFi.woff2" as="font" type="font/woff2" crossorigin="crossorigin"/><link rel="preload" href="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3e%3cpath%20fill-rule='evenodd'%20d='M9.75.75c0%20.414.336.75.75.75h2.94L7.47%207.47a.75.75%200%200%200%201.06%201.06l5.97-5.97V5.5a.75.75%200%200%200%201.5%200V0h-5.5a.75.75%200%200%200-.75.75Zm-8%20.25A1.75%201.75%200%200%200%200%202.75v11.5C0%2015.216.784%2016%201.75%2016h11.5A1.75%201.75%200%200%200%2015%2014.25V8.5a.75.75%200%200%200-1.5%200v5.75a.25.25%200%200%201-.25.25H1.75a.25.25%200%200%201-.25-.25V2.75a.25.25%200%200%201%20.25-.25H7.5a.75.75%200%200%200%200-1.5H1.75Z'%20clip-rule='evenodd'/%3e%3c/svg%3e" as="image"/><link rel="preload" href="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20fill='none'%20viewBox='0%200%206%206'%3e%3cpath%20fill='%23000'%20d='M.707%201.825%202.62%204.057a.5.5%200%200%200%20.76%200l1.913-2.232A.5.5%200%200%200%204.913%201H1.087a.5.5%200%200%200-.38.825Z'/%3e%3c/svg%3e" as="image"/><meta name="color-scheme" content="dark light"/><meta name="theme-color" content="rgb(242,241,245)" media="(prefers-color-scheme: light)"/><meta name="theme-color" content="#000" media="(prefers-color-scheme: dark)"/><link rel="icon" href="/favicon.ico" sizes="any"/><link rel="icon" href="/oklch-BhPJAgVY.svg" type="image/svg+xml"/><link rel="apple-touch-icon" href="/apple-touch-icon-oklch-DsExz0f-.png"/><meta property="og:image" content="/og-oklch.png"/><meta name="description" content="OKLCH is a new way to encode colors (like hex, RGBA, or HSL)"/><link rel="manifest" href="/oklch.webmanifest"/>
+    <script type="module" crossorigin src="/index-DIjFnq7M.js"></script>
+    <link rel="stylesheet" crossorigin href="/index-B4eUdgXJ.css">
+  </head>
+
+  <body class="is-loading">
+    <div class="layout"><div class="layout_title"><h1 class="title">OKLCH Color Picker &amp; Converter</h1></div><main class="main layout_main" id="main-panel"><button class="main_expand" aria-label="Toggle panel" type="button" aria-expanded="true" aria-controls="main-panel"></button><div class="main_row main_row--sample"><div class="sample is-srgb"><div class="sample_reader" aria-live="polite"></div><div class="sample_normal"></div><div class="sample_compare" aria-hidden="false"><div class="sample_unavailable"></div><div class="sample_real"><div class="sample_note">P3</div></div><div class="sample_fallback"><button class="sample_note" title="Go fallback color">fallback</button></div></div></div></div><div class="main_row"><div class="code is-lch"><div class="field"><kbd class="field_hotkey" aria-hidden="true">o</kbd><input class="field_input" aria-label="OKLCH CSS code" aria-keyshortcuts="o" type="text"/></div></div><div class="code is-rgb"><div class="field is-options"><kbd class="field_hotkey" aria-hidden="true">r</kbd><input class="field_input" aria-label="hex/rgba CSS code" aria-keyshortcuts="r" type="text" options='{"hex/rgba":"Auto hex/rgba","hex":"","rgb":"","hsl":"","p3":"","lch":"","lab":"","oklab":"","lrgb":"","numbers":"","figmaP3":""}' optionsLabel="Change format"/><div class="field_options"><select class="field_select" aria-label="Change format"><option value="hex/rgba">Auto hex/rgba</option><option value="hex"></option><option value="rgb"></option><option value="hsl"></option><option value="p3"></option><option value="lch"></option><option value="lab"></option><option value="oklab"></option><option value="lrgb"></option><option value="numbers"></option><option value="figmaP3"></option></select><div class="field_button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M8 11.56 3.47 7.03a.75.75 0 0 1 1.06-1.061L8 9.439l3.47-3.47a.75.75 0 1 1 1.06 1.06L8 11.56Z" clip-rule="evenodd"/></svg></div></div></div><div class="code_note is-paste">Paste HEX/RGB/HSL to convert to OKLCH</div><div class="code_note is-fallback is-hidden" aria-hidden="true">Closest fallback (by chroma) in sRGB</div><div class="code_note is-figma is-hidden" aria-hidden="true">Use it in Figma with <a class="code_link" href="https://help.figma.com/hc/en-us/articles/360039825114-Manage-color-profiles-in-design-files#h_01H6Q1C5DK2JMQ8QFQBKEQ6AM0">P3 color profile</a></div><div class="code_format"></div></div></div><div class="main_row"><nav class="mode" aria-label="Mode"><a class="mode_link is-current" aria-current="page" href="https://oklch.com/">OKLCH</a><a class="mode_link" href="https://lch.oklch.com/">LCH</a></nav></div><footer class="main_footer">Made at <a class="main_link is-em" href="https://evilmartians.com/devtools" target="_blank">Evil Martians</a>, devtools building consultancy.
+By <a class="main_link" href="https://sitnik.ru" target="_blank">Andrey Sitnik</a> &
+<a class="main_link" href="https://twitter.com/romanshamin_en" target="_blank">Roman Shamin</a></footer><a class="main_logo" href="https://evilmartians.com/devtools" aria-label="Evil Martians" tabindex="-1" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" fill="currentcolor" class="main_logo-icon" viewBox="0 0 192 76"><path d="M88 76V32c0-6.75-1.72-12.22-5-16.22l5.29-5.29A10.6 10.6 0 0 0 94 12a2 2 0 0 0 0-4c-3.81 0-6-2.19-6-6a2 2 0 1 0-4 0 10.6 10.6 0 0 0 1.51 5.66L80.22 13c-4-3.28-9.47-5-16.22-5H40c-6.75 0-12.22 1.72-16.22 5l-5.29-5.34A10.6 10.6 0 0 0 20 2a2 2 0 1 0-4 0c0 3.81-2.19 6-6 6a2 2 0 1 0 0 4 10.6 10.6 0 0 0 5.66-1.51L21 15.78c-3.28 4-5 9.47-5 16.22v44zM64 40a10 10 0 1 1 0 20 10 10 0 0 1 0-20m-24 0a10 10 0 1 1 0 20 10 10 0 0 1 0-20"/><path d="M40 56a6 6 0 1 0 0-12 6 6 0 0 0 0 12m0-10a4 4 0 1 1 0 8 4 4 0 0 1 0-8m24 10a6 6 0 1 0 0-12 6 6 0 0 0 0 12m0-10a4 4 0 1 1 0 8 4 4 0 0 1 0-8m88 10a6 6 0 0 0 5.543-3.704 6.005 6.005 0 0 0-1.3-6.539 6.002 6.002 0 0 0-9.232.91A6.002 6.002 0 0 0 152 56m0-10a4 4 0 1 1 0 8 4 4 0 0 1 0-8m-24 10a6 6 0 0 0 5.543-3.704 6.005 6.005 0 0 0-1.3-6.539 6.002 6.002 0 0 0-9.232.91A6.002 6.002 0 0 0 128 56m0-10a4 4 0 1 1 0 8 4 4 0 0 1 0-8"/><path d="M176 76V63.8a10 10 0 0 0 0-19.6V32c0-15.25-8.75-24-24-24h-24c-15.25 0-24 8.75-24 24v12.2a10 10 0 0 0-5.753 16.128A10 10 0 0 0 104 63.8V76zm0-27.66a6 6 0 0 1 0 11.32zm-72 11.32a6 6 0 0 1 0-11.32zm24 .34a10.002 10.002 0 0 1-9.808-11.95 9.998 9.998 0 0 1 13.635-7.289A10 10 0 0 1 138 50a10 10 0 0 1-10 10m24 0a10.002 10.002 0 0 1-9.808-11.95 9.998 9.998 0 0 1 13.635-7.289A10 10 0 0 1 162 50a10 10 0 0 1-10 10m-42-30v-2.41l5.93 6 6.07-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6 6-6v2.82l-5.93 6-6.07-6-6 6-6-6-6 6-6-6-6 6-6-6.05-6 5.9-6-6.21z"/></svg></a></main><div class="layout_links"><a class="link is-help" target="_blank" href="https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl"><svg class="link_icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none"><circle cx="24" cy="24" r="24" fill="url(#a)"/><path fill="#fff" d="M24.63 27.825V27.6c0-3.758 5.242-2.948 5.242-8.01 0-2.767-2.362-4.95-5.647-4.95-3.42 0-5.783 1.935-6.233 5.4h2.52c.405-1.89 1.71-2.97 3.668-2.97 1.755 0 3.127 1.102 3.127 2.52 0 3.532-5.107 3.195-5.107 7.875v.36h2.43Zm-1.17 5.31c1.282 0 2.025-.607 2.025-1.687 0-1.103-.743-1.71-2.025-1.71-1.283 0-2.025.607-2.025 1.71 0 1.08.742 1.687 2.025 1.687Z"/><defs><linearGradient id="a" x1="7.5" x2="39.75" y1="40.5" y2="6.75" gradientUnits="userSpaceOnUse"><stop stop-color="#B378FC"/><stop offset=".51" stop-color="#EC6498"/><stop offset="1" stop-color="#EE740B"/></linearGradient></defs></svg>Why OKLCH is better than RGB and HSL</a><a class="link is-github" target="_blank" href="https://github.com/evilmartians/oklch-picker"><svg class="link_icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none"><circle cx="24" cy="24" r="24" fill="#fff"/><path fill="#000" fill-rule="evenodd" d="M24.042 11.25A12.775 12.775 0 0 0 11.25 24.042c0 5.629 3.667 10.404 8.784 12.11.682.085.853-.256.853-.597v-2.217c-3.582.767-4.35-1.706-4.35-1.706-.596-1.45-1.45-1.876-1.45-1.876-1.193-.768.086-.768.086-.768 1.28.086 1.961 1.28 1.961 1.28 1.11 1.961 2.985 1.364 3.753 1.023.085-.853.426-1.364.853-1.706-2.815-.34-5.8-1.45-5.8-6.31 0-1.365.512-2.559 1.28-3.412-.17-.34-.597-1.62.085-3.41 0 0 1.109-.342 3.497 1.278 1.023-.256 2.131-.426 3.24-.426 1.109 0 2.217.17 3.24.426 2.474-1.62 3.497-1.279 3.497-1.279.683 1.791.256 3.07.086 3.411.853.853 1.279 2.047 1.279 3.412 0 4.946-2.985 5.97-5.8 6.31.427.427.854 1.194.854 2.388v3.497c0 .341.255.767.852.597a12.706 12.706 0 0 0 8.7-12.11c.084-6.993-5.63-12.707-12.708-12.707Z" clip-rule="evenodd"/></svg>evilmartians / oklch-picker</a></div><div class="layout_l"><section class="card is-l"><h2 class="card_title">Lightness</h2><div class="card_number"><div class="field"><kbd class="field_hotkey" aria-hidden="true">l</kbd><input class="field_input" aria-label="L" aria-keyshortcuts="l" type="text" role="spinbutton" aria-valuemin="0" aria-valuemax="100" pattern="^[0-9+\/*.\-]+$" inputmode="decimal" step="1"/><button class="field_control is-increase" tabindex="-1" aria-hidden="true"></button><button class="field_control is-decrease" tabindex="-1" aria-hidden="true"></button></div></div><div class="card_chart"><div class="card_size"><div class="chart is-h" aria-hidden="true"><div class="chart_line is-x is-c"><div class="chart_label">c</div></div><div class="chart_line is-y is-l"><div class="chart_label">l</div></div><canvas class="chart_canvas"></canvas></div></div></div><div class="range is-l"><canvas class="range_space"></canvas><input class="range_input" type="range" min="0" max="100" step="0.01" aria-hidden="true" value="70" tabindex="-1" list="range_l_values"/><datalist id="range_l_values"></datalist></div></section></div><div class="layout_c"><section class="card is-c"><h2 class="card_title">Chroma</h2><div class="card_number"><div class="field"><kbd class="field_hotkey" aria-hidden="true">c</kbd><input class="field_input" aria-label="C" aria-keyshortcuts="c" type="text" role="spinbutton" pattern="^[0-9+\/*.\-]+$" aria-valuemin="0" inputmode="decimal" step="0.01"/><button class="field_control is-increase" tabindex="-1" aria-hidden="true"></button><button class="field_control is-decrease" tabindex="-1" aria-hidden="true"></button></div></div><div class="card_chart"><div class="card_size"><div class="chart is-l" aria-hidden="true"><div class="chart_line is-x is-c"><div class="chart_label">c</div></div><div class="chart_line is-y is-h"><div class="chart_label">h</div></div><canvas class="chart_canvas"></canvas></div></div></div><div class="range is-c"><canvas class="range_space"></canvas><input class="range_input" type="range" min="0" max="0.37" step="0.0001" aria-hidden="true" value="0.1" tabindex="-1" list="range_c_values"/><datalist id="range_c_values"></datalist></div></section></div><div class="layout_h"><section class="card is-h"><h2 class="card_title">Hue</h2><div class="card_number"><div class="field"><kbd class="field_hotkey" aria-hidden="true">h</kbd><input class="field_input" aria-label="H" aria-keyshortcuts="h" type="text" role="spinbutton" pattern="^[0-9+\/*.\-]+$" aria-valuemin="0" aria-valuemax="360" inputmode="decimal" step="1"/><button class="field_control is-increase" tabindex="-1" aria-hidden="true"></button><button class="field_control is-decrease" tabindex="-1" aria-hidden="true"></button></div></div><div class="card_chart"><div class="card_size"><div class="chart is-c" aria-hidden="true"><div class="chart_line is-x is-l"><div class="chart_label">l</div></div><div class="chart_line is-y is-h"><div class="chart_label">h</div></div><canvas class="chart_canvas"></canvas></div></div></div><div class="range is-h"><canvas class="range_space"></canvas><input class="range_input" type="range" min="0" max="360" step="0.01" aria-hidden="true" value="286" tabindex="-1" list="range_h_values"/><datalist id="range_h_values"></datalist></div></section></div><div class="layout_extra"><div class="layout_3d"><section class="card is-3d"><h2 class="card_title">3D</h2><div class="minimodel"><canvas class="minimodel_canvas"></canvas><div class="minimodel_status"></div><div class="minimodel_button"><button class="button is-3d" title="Open 3D in fullscreen"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m1.5 14.5 13-13m-13 13V9m0 5.5H7m7.5-13H9m5.5 0V7"/></svg></button></div></div></section></div><section class="card is-a"><h2 class="card_title">Alpha</h2><div class="card_number"><div class="field"><kbd class="field_hotkey" aria-hidden="true">a</kbd><input class="field_input" aria-label="Alpha" aria-keyshortcuts="a" type="text" role="spinbutton" pattern="^[0-9+\/*.\-]+$" aria-valuemin="0" aria-valuemax="100" value="100" step="1" inputmode="decimal"/><button class="field_control is-increase" tabindex="-1" aria-hidden="true"></button><button class="field_control is-decrease" tabindex="-1" aria-hidden="true"></button></div></div><div class="range is-a"><input class="range_input" type="range" min="0" max="100" step="0.01" aria-hidden="true" value="100" tabindex="-1" list="range_a_values"/><datalist id="range_a_values"></datalist></div></section></div><div class="layout_prefs"><section class="settings" aria-label="Settings"><label class="checkbox"><input class="checkbox_input" name="mode3d" type="checkbox"/><span class="checkbox_control"><span class="checkbox_icon"></span>Show 3D</span></label><label class="checkbox"><input class="checkbox_input" name="charts" type="checkbox" checked="checked"/><span class="checkbox_control"><span class="checkbox_icon"></span>Show graphs</span></label><label class="checkbox"><input class="checkbox_input" name="p3" type="checkbox" checked="checked"/><span class="checkbox_control"><span class="checkbox_icon"></span>Show P3</span></label><label class="checkbox"><input class="checkbox_input" name="rec2020" type="checkbox"/><span class="checkbox_control"><span class="checkbox_icon"></span>Show Rec2020</span></label></section></div></div>
+    <article class="fullmodel is-hidden" aria-hidden="true" inert="inert"><h2 class="title">OKLCH 3D model</h2><div class="fullmodel_status"></div><div class="fullmodel_button"><button class="button is-close3d" title="Back to color picker"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1.5 14.5 13-13m-13 0 13 13"/></svg></button></div><canvas class="fullmodel_canvas"></canvas><div class="fullmodel_note">Drag to rotate • Scroll to zoom  • Right button to move</div></article>
+    <div class="benchmark" aria-live="polite" aria-label="Benchmark" aria-hidden="true"><div class="benchmark_row">Freeze max <strong class="benchmark_value is-freeze-max"></strong></div><div class="benchmark_row">Freeze sum <strong class="benchmark_value is-freeze-sum"></strong></div><div class="benchmark_row">Worker max <strong class="benchmark_value is-worker-max"></strong></div><div class="benchmark_row">Worker sum <strong class="benchmark_value is-worker-sum"></strong></div><div class="benchmark_row">Paint      <strong class="benchmark_value is-paint"></strong></div></div>
+  </body>
+</html>
+:end:
+
+* Experimenting with hasilberg-theme.el functions
+Hasilberg is built with a similar idea as I had for mawce in that it's based on /shades/.
+
+#+begin_src emacs-lisp
+  (let* (
+         (base "#393e4f")
+         (rg-base (hasliberg-theme--hex-to-rgb base))
+         (lch-base (hasliberg-theme--rgb-to-lch base))
+         )
+    (list (list base)
+  	(list rg-base)
+  	(list lch-base)
+  	)
+    
+    
+    )
+#+end_src
+
+#+RESULTS:
+| #393e4f                                                               |
+| (:r 0.2235294117647059 :g 0.24313725490196078 :b 0.30980392156862746) |
+| (:luminance 26.389 :chroma 13.725 :hue 256.602)                       |
+
+#+begin_src emacs-lisp :var COLORS=backgrounds :colnames '("Name" "OrigHex" "Luminance" "Chroma" "Hue")
+  (cl-loop for color in COLORS
+        collect
+        (let* ((luv (hasliberg-theme--rgb-to-lch (cadr  color)))
+  	     (luv-out (list (plist-get luv :luminance)
+  			    (plist-get luv :chroma)
+  			    (plist-get luv :hue)
+  			    (hasliberg-theme--lch-to-rgb luv)
+  			    )))
+  	(append color luv-out)))
+#+end_src
+
+#+RESULTS:
+| mawce-dark-background-022   | #2a1716 | 10.281 |  8.685 |  14.899 | #2A1716 |
+| mawce-dark-background-052   | #29190f | 10.566 |   9.63 |  36.291 | #29190F |
+| mawce-dark-background-082   | #241c0b | 10.775 |  8.861 |  61.658 | #241C0B |
+| mawce-dark-background-112   | #1d1f0c | 11.048 |  8.295 |  91.769 | #1D1F0C |
+| mawce-dark-background-142   | #142113 | 11.159 |  7.468 | 125.698 | #142113 |
+| mawce-dark-background-172   | #0b221b | 11.236 |  7.233 | 160.854 | #0B221B |
+| mawce-dark-background-202   | #072123 | 10.952 |  7.439 | 200.807 | #072123 |
+| mawce-dark-background-232   | #0c2029 | 11.073 |  8.576 |   228.4 | #0C2029 |
+| mawce-dark-background-262   | #151d2c | 10.704 |  9.384 | 252.138 | #151D2C |
+| mawce-dark-background-292   | #1d1a2b | 10.367 |  8.872 | 271.782 | #1D1A2B |
+| mawce-dark-background-322   | #241826 | 10.321 |  7.192 | 301.311 | #241826 |
+| mawce-dark-background-352   | #29171f | 10.432 |  7.321 | 342.403 | #29171F |
+| mawce-medium-background-022 | #79615f |  43.42 | 15.558 |  17.289 | #79615F |
+| mawce-medium-background-052 | #766357 | 43.453 | 16.724 |  41.663 | #766357 |
+| mawce-medium-background-082 | #706653 | 43.613 | 16.565 |  64.318 | #706653 |
+| mawce-medium-background-112 | #676955 | 43.716 | 14.456 |  90.512 | #676955 |
+| mawce-medium-background-142 | #5d6c5c | 43.981 |  12.86 | 125.663 | #5D6C5C |
+| mawce-medium-background-172 | #586d62 |  44.08 | 12.302 | 149.728 | #586D62 |
+| mawce-medium-background-202 | #526d6f | 44.059 | 14.251 | 198.512 | #526D6F |
+| mawce-medium-background-232 | #566b76 | 43.947 |  15.69 | 225.703 | #566B76 |
+| mawce-medium-background-262 | #5e687a | 43.778 | 16.826 |  248.93 | #5E687A |
+| mawce-medium-background-292 | #676478 | 43.292 |  15.59 | 271.537 | #676478 |
+| mawce-medium-background-322 | #706272 | 43.353 | 12.722 | 302.651 | #706272 |
+| mawce-medium-background-352 | #766069 | 43.119 | 13.027 | 342.303 | #766069 |
+| mawce-light-background-022  | #d1b6b4 | 76.257 | 17.149 |  16.976 | #D1B6B4 |
+| mawce-light-background-052  | #ceb8ab | 76.279 | 18.922 |  41.662 | #CEB8AB |
+| mawce-light-background-082  | #c7bca7 | 76.618 | 18.822 |  65.514 | #C7BCA7 |
+| mawce-light-background-112  | #bdc0a9 |  76.91 | 17.088 |  91.712 | #BDC0A9 |
+| mawce-light-background-142  | #b3c3b0 |  77.13 | 15.101 | 122.156 | #B3C3B0 |
+| mawce-light-background-172  | #aac4bb | 77.049 | 14.234 |  163.25 | #AAC4BB |
+| mawce-light-background-202  | #a7c4c6 | 77.145 | 16.173 | 197.744 | #A7C4C6 |
+| mawce-light-background-232  | #aac1ce | 76.765 | 18.341 | 225.937 | #AAC1CE |
+| mawce-light-background-262  | #b3bed2 | 76.718 | 18.799 | 248.222 | #B3BED2 |
+| mawce-light-background-292  | #bdbad0 | 76.369 | 17.252 |   271.2 | #BDBAD0 |
+| mawce-light-background-322  | #c7b7c9 | 76.208 | 14.578 | 303.339 | #C7B7C9 |
+| mawce-light-background-352  | #ceb6bf | 76.277 | 14.108 | 343.997 | #CEB6BF |
+| mawce-grayscales-98         | #f9f9f9 | 97.926 |  0.017 |  272.98 | #F9F9F9 |
+| mawce-grayscales-88         | #d8d8d8 |  86.34 |  0.015 |  272.98 | #D8D8D8 |
+| mawce-grayscales-78         | #b7b7b7 | 74.415 |  0.013 |  272.98 | #B7B7B7 |
+| mawce-grayscales-68         | #989898 | 62.843 |  0.011 |  272.98 | #989898 |
+| mawce-grayscales-58         | #7a7a7a | 51.223 |  0.009 |  272.98 | #7A7A7A |
+| mawce-grayscales-48         | #5e5e5e | 39.904 |  0.007 |  272.98 | #5E5E5E |
+| mawce-grayscales-38         | #434343 | 28.414 |  0.005 |  272.98 | #434343 |
+| mawce-grayscales-28         | #292929 | 16.589 |  0.003 |  272.98 | #292929 |
+| mawce-grayscales-18         | #121212 |  5.464 |  0.001 |  272.98 | #121212 |
+| mawce-grayscales-08         | #020202 |  0.548 |    0.0 |  272.98 | #020202 |
+| mawce-bluescale-000         | #3f3f3f | 26.651 |  0.005 |  272.98 | #3F3F3F |
+| mawce-bluescale-001         | #3c3f47 | 26.651 |  6.524 | 253.194 | #3C3F47 |
+| mawce-bluescale-002         | #393e4f | 26.389 | 13.725 | 256.602 | #393E4F |
+| mawce-bluescale-003         | #373e57 | 26.579 | 20.311 | 257.698 | #373E57 |
+| mawce-bluescale-004         | #343d5f |  26.43 | 27.587 | 258.788 | #343D5F |
+| mawce-bluescale-005         | #323c66 | 26.359 | 33.805 | 259.923 | #323C66 |
+| mawce-bluescale-006         | #2f3a6d | 25.965 | 40.454 | 260.914 | #2F3A6D |
+| mawce-bluescale-007         | #2d3975 | 26.065 | 47.008 | 261.623 | #2D3975 |
+| mawce-bluescale-008         | #2b377c | 25.866 | 52.941 | 262.445 | #2B377C |
+| mawce-bluescale-009         | #293484 | 25.543 | 59.484 | 263.391 | #293484 |
+| mawce-bluescale-010         | #28318b | 25.296 | 64.816 | 264.194 | #28318B |
+
+** Generating shades
+Build some shades based off our basic background color (mawce-bluescale-002)
+#+begin_src emacs-lisp :results code
+  (hasliberg-theme--generate-lch-shades '(:luminance 26.389 :chroma 13.725 :hue 256.602))
+#+end_src
+
+#+RESULTS:
+#+begin_src emacs-lisp
+("#000000" "#000000" "#000012" "#021332" "#22283B" "#393E4F" "#515565" "#696E7E" "#838797" "#9DA1B1" "#AAAEBE")
+#+end_src
+
+Build some shades based off our basic foreground color
+#+begin_src emacs-lisp
+  (hasliberg-theme--generate-lch-shades (hasliberg-theme--rgb-to-lch "#b3bed2"))
+#+end_src
+
+#+RESULTS:
+| #3E4B60 | #4B576B | #646F83 | #7D899D | #98A3B7 | #B3BED2 | #CFDAEE | #EBF6FF | #FFFFFF | #FFFFFF | #FFFFFF |
+
+#+begin_src emacs-lisp
+  (hasliberg-theme--generate-lch-shades (hasliberg-theme--rgb-to-lch "#689675"))
+#+end_src
+
+#+RESULTS:
+| #002D00 | #003708 | #0F4C28 | #316442 | #4D7C5B | #689675 | #83B090 | #9FCCAB | #BBE8C7 | #D7FFE3 | #E6FFF2 |
+
+
+My light colors have a luminance somewhere in the vicinity of =75.0=.
+#+begin_src emacs-lisp
+  (list (hasliberg-theme--rgb-to-lch "#e5abb9") (hasliberg-theme--rgb-to-lch "#e7acb1") (hasliberg-theme--rgb-to-lch "#e8ada9"))
+
+#+end_src
+
+#+RESULTS:
+| :luminance | 75.629 | :chroma | 35.309 | :hue | 355.891 |
+| :luminance | 75.865 | :chroma |  37.33 | :hue |   6.808 |
+| :luminance | 76.012 | :chroma | 39.757 | :hue |  16.106 |
+
+My medium colors have a luminance somewhere in the vicinity of =57=.
+#+begin_src emacs-lisp
+  (list (hasliberg-theme--rgb-to-lch "#ab7e61") (hasliberg-theme--rgb-to-lch "#a8805c") (hasliberg-theme--rgb-to-lch "#a38359"))
+
+#+end_src
+
+#+RESULTS:
+| :luminance | 56.528 | :chroma | 41.337 | :hue | 38.618 |
+| :luminance |  56.62 | :chroma | 41.549 | :hue | 45.227 |
+| :luminance | 56.822 | :chroma | 40.163 | :hue |   53.5 |
+
+My dark colors have a luminance somewhere in the vicinity of =35.0=.
+#+begin_src emacs-lisp
+  (list (hasliberg-theme--rgb-to-lch "#385a36")
+        (hasliberg-theme--rgb-to-lch "#2f5b3d")
+        (hasliberg-theme--rgb-to-lch "#255c45"))
+
+#+end_src
+
+#+RESULTS:
+| :luminance | 34.842 | :chroma | 27.169 | :hue | 126.249 |
+| :luminance |  34.85 | :chroma | 26.634 | :hue | 137.952 |
+| :luminance | 34.958 | :chroma | 26.216 | :hue |   151.0 |
+
+** Reviewing the values for my olkch-X colors
+#+name: mawce-oklch
+| Name             | Hex     |
+|------------------+---------|
+| mawce-light-003  | #e5abb9 |
+| mawce-light-013  | #e7acb1 |
+| mawce-light-023  | #e8ada9 |
+| mawce-light-033  | #e7aea1 |
+| mawce-light-043  | #e5b09a |
+| mawce-light-053  | #e3b294 |
+| mawce-light-063  | #dfb48f |
+| mawce-light-073  | #dab78c |
+| mawce-light-083  | #d4ba8a |
+| mawce-light-093  | #cdbd8a |
+| mawce-light-103  | #c6c08c |
+| mawce-light-113  | #bdc38f |
+| mawce-light-123  | #b5c694 |
+| mawce-light-133  | #acc89a |
+| mawce-light-143  | #a4caa1 |
+| mawce-light-153  | #9ccba9 |
+| mawce-light-163  | #94ccb1 |
+| mawce-light-173  | #8ecdb9 |
+| mawce-light-183  | #8acdc2 |
+| mawce-light-193  | #87ccca |
+| mawce-light-203  | #86ccd2 |
+| mawce-light-213  | #88cad9 |
+| mawce-light-223  | #8bc8df |
+| mawce-light-233  | #90c6e4 |
+| mawce-light-243  | #97c4e8 |
+| mawce-light-253  | #9ec1ea |
+| mawce-light-263  | #a6beec |
+| mawce-light-273  | #aebbec |
+| mawce-light-283  | #b7b9ea |
+| mawce-light-293  | #bfb6e7 |
+| mawce-light-303  | #c7b3e3 |
+| mawce-light-313  | #ceb1de |
+| mawce-light-323  | #d4afd8 |
+| mawce-light-333  | #daadd1 |
+| mawce-light-343  | #dfacca |
+| mawce-light-353  | #e3acc2 |
+| mawce-medium-003 | #ae7785 |
+| mawce-medium-013 | #af787d |
+| mawce-medium-023 | #b07975 |
+| mawce-medium-033 | #af7a6e |
+| mawce-medium-043 | #ae7c67 |
+| mawce-medium-053 | #ab7e61 |
+| mawce-medium-063 | #a8805c |
+| mawce-medium-073 | #a38359 |
+| mawce-medium-083 | #9e8657 |
+| mawce-medium-093 | #988857 |
+| mawce-medium-103 | #918b59 |
+| mawce-medium-113 | #898e5c |
+| mawce-medium-123 | #819061 |
+| mawce-medium-133 | #799367 |
+| mawce-medium-143 | #70946e |
+| mawce-medium-153 | #689675 |
+| mawce-medium-163 | #60977d |
+| mawce-medium-173 | #5a9785 |
+| mawce-medium-183 | #55978d |
+| mawce-medium-193 | #529795 |
+| mawce-medium-203 | #51969c |
+| mawce-medium-213 | #5395a2 |
+| mawce-medium-223 | #5793a8 |
+| mawce-medium-233 | #5d91ad |
+| mawce-medium-243 | #638eb1 |
+| mawce-medium-253 | #6b8cb3 |
+| mawce-medium-263 | #7389b4 |
+| mawce-medium-273 | #7b87b4 |
+| mawce-medium-283 | #8384b3 |
+| mawce-medium-293 | #8a81b0 |
+| mawce-medium-303 | #927fac |
+| mawce-medium-313 | #987da8 |
+| mawce-medium-323 | #9e7ba2 |
+| mawce-medium-333 | #a37a9b |
+| mawce-medium-343 | #a87894 |
+| mawce-medium-353 | #ab788d |
+| mawce-dark-003   | #703f4c |
+| mawce-dark-013   | #713f45 |
+| mawce-dark-023   | #71403d |
+| mawce-dark-033   | #714136 |
+| mawce-dark-043   | #704230 |
+| mawce-dark-053   | #6e4429 |
+| mawce-dark-063   | #6b4724 |
+| mawce-dark-073   | #674920 |
+| mawce-dark-083   | #624c1d |
+| mawce-dark-093   | #5d4f1d |
+| mawce-dark-103   | #57511f |
+| mawce-dark-113   | #505423 |
+| mawce-dark-123   | #485629 |
+| mawce-dark-133   | #40582f |
+| mawce-dark-143   | #385a36 |
+| mawce-dark-153   | #2f5b3d |
+| mawce-dark-163   | #255c45 |
+| mawce-dark-173   | #1c5c4c |
+| mawce-dark-183   | #135c53 |
+| mawce-dark-193   | #0c5c5a |
+| mawce-dark-203   | #0b5b61 |
+| mawce-dark-213   | #105a67 |
+| mawce-dark-223   | #18586c |
+| mawce-dark-233   | #215670 |
+| mawce-dark-243   | #2a5473 |
+| mawce-dark-253   | #335275 |
+| mawce-dark-263   | #3b4f76 |
+| mawce-dark-273   | #434d76 |
+| mawce-dark-283   | #4a4a75 |
+| mawce-dark-293   | #514873 |
+| mawce-dark-303   | #58466f |
+| mawce-dark-313   | #5d446b |
+| mawce-dark-323   | #624266 |
+| mawce-dark-333   | #674160 |
+| mawce-dark-343   | #6a405a |
+| mawce-dark-353   | #6d3f53 |
+
+#+begin_src emacs-lisp :var COLORS=mawce-oklch :colnames '("Name" "OrigHex" "Luminance" "Chroma" "Hue")
+  (cl-loop for color in COLORS
+        collect
+        (let* ((luv (hasliberg-theme--rgb-to-lch (cadr  color)))
+  	     (luv-out (list (plist-get luv :luminance)
+  			    (plist-get luv :chroma)
+  			    (plist-get luv :hue)
+  			    )))
+  	(append color luv-out)))
+#+end_src
+
+#+RESULTS:
+| Name             | OrigHex | Luminance | Chroma |     Hue |
+|------------------+---------+-----------+--------+---------|
+| mawce-light-003  | #e5abb9 |    75.629 | 35.309 | 355.891 |
+| mawce-light-013  | #e7acb1 |    75.865 |  37.33 |   6.808 |
+| mawce-light-023  | #e8ada9 |    76.012 | 39.757 |  16.106 |
+| mawce-light-033  | #e7aea1 |    75.967 | 41.567 |  24.363 |
+| mawce-light-043  | #e5b09a |    76.095 | 42.634 |  32.364 |
+| mawce-light-053  | #e3b294 |    76.259 | 43.823 |  39.173 |
+| mawce-light-063  | #dfb48f |    76.261 | 43.799 |  46.105 |
+| mawce-light-073  | #dab78c |    76.476 | 42.809 |  53.868 |
+| mawce-light-083  | #d4ba8a |    76.649 | 41.677 |  62.246 |
+| mawce-light-093  | #cdbd8a |    76.806 | 40.034 |  71.216 |
+| mawce-light-103  | #c6c08c |     77.04 | 38.276 |  80.282 |
+| mawce-light-113  | #bdc38f |     77.18 | 36.807 |  91.544 |
+| mawce-light-123  | #b5c694 |     77.49 | 35.473 | 102.292 |
+| mawce-light-133  | #acc89a |    77.527 | 34.057 | 113.893 |
+| mawce-light-143  | #a4caa1 |    77.702 | 33.011 | 125.413 |
+| mawce-light-153  | #9ccba9 |    77.665 | 31.725 | 138.136 |
+| mawce-light-163  | #94ccb1 |    77.671 | 31.694 | 151.219 |
+| mawce-light-173  | #8ecdb9 |    77.826 | 32.145 | 163.103 |
+| mawce-light-183  | #8acdc2 |    77.852 | 32.339 | 176.561 |
+| mawce-light-193  | #87ccca |    77.639 |  33.36 | 189.442 |
+| mawce-light-203  | #86ccd2 |     77.82 | 35.305 | 200.082 |
+| mawce-light-213  | #88cad9 |     77.57 | 36.908 |  211.45 |
+| mawce-light-223  | #8bc8df |    77.356 | 38.984 | 220.881 |
+| mawce-light-233  | #90c6e4 |    77.232 | 40.726 | 229.014 |
+| mawce-light-243  | #97c4e8 |    77.212 |  41.84 | 236.469 |
+| mawce-light-253  | #9ec1ea |     76.89 | 42.462 | 243.467 |
+| mawce-light-263  | #a6beec |    76.673 | 43.297 | 250.791 |
+| mawce-light-273  | #aebbec |    76.433 | 42.992 | 257.552 |
+| mawce-light-283  | #b7b9ea |      76.5 | 40.614 | 264.489 |
+| mawce-light-293  | #bfb6e7 |    76.254 | 38.829 |   272.6 |
+| mawce-light-303  | #c7b3e3 |    76.025 | 37.052 | 282.154 |
+| mawce-light-313  | #ceb1de |    75.971 | 34.841 | 292.257 |
+| mawce-light-323  | #d4afd8 |    75.832 | 33.142 | 303.639 |
+| mawce-light-333  | #daadd1 |    75.697 | 32.554 | 317.174 |
+| mawce-light-343  | #dfacca |    75.735 | 32.775 |  330.27 |
+| mawce-light-353  | #e3acc2 |    75.904 | 33.426 | 343.961 |
+| mawce-medium-003 | #ae7785 |    55.973 | 34.147 | 355.681 |
+| mawce-medium-013 | #af787d |    56.115 | 35.643 |   6.696 |
+| mawce-medium-023 | #b07975 |    56.277 | 38.197 |  16.145 |
+| mawce-medium-033 | #af7a6e |    56.246 | 39.595 |  23.574 |
+| mawce-medium-043 | #ae7c67 |    56.479 | 41.135 |  31.289 |
+| mawce-medium-053 | #ab7e61 |    56.528 | 41.337 |  38.618 |
+| mawce-medium-063 | #a8805c |     56.62 | 41.549 |  45.227 |
+| mawce-medium-073 | #a38359 |    56.822 | 40.163 |    53.5 |
+| mawce-medium-083 | #9e8657 |    57.083 | 39.172 |  61.811 |
+| mawce-medium-093 | #988857 |    57.048 | 37.435 |  69.611 |
+| mawce-medium-103 | #918b59 |    57.276 | 35.611 |  79.685 |
+| mawce-medium-113 | #898e5c |    57.499 |  34.38 |  91.054 |
+| mawce-medium-123 | #819061 |    57.537 | 32.647 | 101.868 |
+| mawce-medium-133 | #799367 |    57.953 | 32.095 | 113.699 |
+| mawce-medium-143 | #70946e |    57.799 | 30.644 | 126.146 |
+| mawce-medium-153 | #689675 |    58.075 | 30.688 | 137.832 |
+| mawce-medium-163 | #60977d |    58.132 | 30.368 | 150.635 |
+| mawce-medium-173 | #5a9785 |    58.037 | 29.791 | 163.647 |
+| mawce-medium-183 | #55978d |    58.025 | 30.162 | 176.725 |
+| mawce-medium-193 | #529795 |    58.129 | 31.231 | 189.199 |
+| mawce-medium-203 | #51969c |    58.001 | 32.642 | 200.884 |
+| mawce-medium-213 | #5395a2 |    57.982 | 34.026 | 210.588 |
+| mawce-medium-223 | #5793a8 |    57.771 | 35.943 |  221.12 |
+| mawce-medium-233 | #5d91ad |    57.651 |  37.72 | 230.064 |
+| mawce-medium-243 | #638eb1 |    57.244 | 39.938 | 238.469 |
+| mawce-medium-253 | #6b8cb3 |    57.208 | 40.204 | 244.829 |
+| mawce-medium-263 | #7389b4 |    56.911 | 40.515 | 251.791 |
+| mawce-medium-273 | #7b87b4 |    56.914 | 39.758 | 257.881 |
+| mawce-medium-283 | #8384b3 |    56.666 | 39.129 | 265.182 |
+| mawce-medium-293 | #8a81b0 |    56.326 | 37.474 | 272.631 |
+| mawce-medium-303 | #927fac |    56.355 | 34.847 | 281.991 |
+| mawce-medium-313 | #987da8 |    56.257 | 33.242 | 291.119 |
+| mawce-medium-323 | #9e7ba2 |    56.131 | 31.375 | 303.294 |
+| mawce-medium-333 | #a37a9b |     56.16 | 29.687 | 317.174 |
+| mawce-medium-343 | #a87894 |    55.983 | 30.868 | 331.314 |
+| mawce-medium-353 | #ab788d |    56.102 | 31.399 | 343.891 |
+| mawce-dark-003   | #703f4c |    32.966 | 29.986 | 356.397 |
+| mawce-dark-013   | #713f45 |    32.909 |  32.12 |   5.662 |
+| mawce-dark-023   | #71403d |     32.95 | 33.952 |  15.123 |
+| mawce-dark-033   | #714136 |    33.044 | 35.905 |  22.101 |
+| mawce-dark-043   | #704230 |    33.037 | 36.898 |  27.621 |
+| mawce-dark-053   | #6e4429 |    33.156 |  37.27 |  34.669 |
+| mawce-dark-063   | #6b4724 |    33.477 | 36.241 |  42.354 |
+| mawce-dark-073   | #674920 |    33.463 | 34.901 |  49.499 |
+| mawce-dark-083   | #624c1d |    33.678 | 33.324 |  59.159 |
+| mawce-dark-093   | #5d4f1d |    33.999 |  31.84 |  68.825 |
+| mawce-dark-103   | #57511f |    34.004 |  30.21 |  78.484 |
+| mawce-dark-113   | #505423 |    34.329 |  29.19 |  90.757 |
+| mawce-dark-123   | #485629 |    34.382 |  27.95 | 103.017 |
+| mawce-dark-133   | #40582f |    34.548 | 27.522 | 114.778 |
+| mawce-dark-143   | #385a36 |    34.842 | 27.169 | 126.249 |
+| mawce-dark-153   | #2f5b3d |     34.85 | 26.634 | 137.952 |
+| mawce-dark-163   | #255c45 |    34.958 | 26.216 |   151.0 |
+| mawce-dark-173   | #1c5c4c |    34.849 | 25.713 | 163.434 |
+| mawce-dark-183   | #135c53 |    34.837 | 25.785 | 176.156 |
+| mawce-dark-193   | #0c5c5a |    34.944 | 26.379 | 188.687 |
+| mawce-dark-203   | #0b5b61 |    34.835 | 27.394 | 202.452 |
+| mawce-dark-213   | #105a67 |    34.806 | 28.938 | 213.737 |
+| mawce-dark-223   | #18586c |    34.511 |  30.75 | 224.292 |
+| mawce-dark-233   | #215670 |    34.291 |  32.42 | 232.896 |
+| mawce-dark-243   | #2a5473 |     34.13 | 33.695 | 240.131 |
+| mawce-dark-253   | #335275 |     34.03 | 34.373 | 246.622 |
+| mawce-dark-263   | #3b4f76 |    33.626 | 35.085 |  253.36 |
+| mawce-dark-273   | #434d76 |    33.582 | 34.619 | 259.264 |
+| mawce-dark-283   | #4a4a75 |    33.217 | 34.263 | 265.877 |
+| mawce-dark-293   | #514873 |    33.183 | 32.794 | 272.742 |
+| mawce-dark-303   | #58466f |    33.141 | 30.232 | 281.835 |
+| mawce-dark-313   | #5d446b |    32.969 | 28.533 | 290.904 |
+| mawce-dark-323   | #624266 |    32.815 |  27.13 | 302.599 |
+| mawce-dark-333   | #674160 |    32.938 | 26.059 | 317.242 |
+| mawce-dark-343   | #6a405a |    32.852 | 26.064 | 330.173 |
+| mawce-dark-353   | #6d3f53 |    32.768 | 27.512 | 344.009 |
+
+
+#+begin_src emacs-lisp
+    (list '("foo")
+  	'hline
+          '("bar"))
+#+end_src
+
+#+RESULTS:
+| foo |
+|-----|
+| bar |
+
+
+Let's try to create a stepped list of simple colors in the "dark" luminance (approximately 34.0) stepping up the hue by a set amount.
+#+begin_src emacs-lisp :var BASEL=34.0 BASEC=25.0 INC=18 :colnames '("Orig" "0" "1" "2" "3" "4" "5" "6" "7" "8" "9" "10")  
+  (-flatten-n 1
+      	    (cl-loop for chroma in '(34.0 57.0 78.0)
+      		  collect
+      		  (append 
+  		   (cl-loop for n in (number-sequence 1 360 INC)
+        			 collect
+        			 (progn (hasliberg-theme--validate-and-set-lch 'foo `(
+        									      :luminance ,BASEL
+        									      :chroma ,chroma
+        									      :hue ,(float (1- n))))
+        				(let ((rlist (hasliberg-theme--generate-lch-shades foo)))
+        				  (push (hasliberg-theme--lch-to-rgb foo) rlist))))
+  		   '(hline)))
+#+end_src
+
+#+RESULTS:
+| Orig    | 0       | 1       | 2       | 3       | 4       | 5       | 6       | 7       | 8       | 9       | 10      |
+|---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+| #76404B | #350000 | #390000 | #400001 | #4B071E | #5F2734 | #76404B | #8F5964 | #A8727D | #C38D97 | #DFA8B2 | #EDB5BF |
+| #73433D | #390000 | #430000 | #350000 | #461104 | #5B2B24 | #73433D | #8C5C56 | #A67570 | #C18F8A | #DCAAA5 | #EAB8B3 |
+| #6D472E | #3A0000 | #4F0000 | #2C0000 | #401900 | #56300E | #6D472E | #865F49 | #A07964 | #BB937E | #D6AD99 | #E4BBA7 |
+| #664B20 | #340000 | #5B0000 | #240700 | #391E00 | #4E3400 | #664B20 | #7E643E | #987D5A | #B29775 | #CEB190 | #DCBF9E |
+| #5C5015 | #220000 | #610000 | #1A0E00 | #2F2300 | #453900 | #5C5015 | #746837 | #8D8154 | #A89B6F | #C3B68B | #D0C399 |
+| #505414 | #000000 | #004100 | #0E1200 | #232700 | #393D00 | #505414 | #686C36 | #818553 | #9B9F6E | #B6BA8A | #C3C798 |
+| #41571D | #000C00 | #004800 | #001600 | #102B00 | #294000 | #41571D | #596F3C | #728857 | #8CA273 | #A7BD8E | #B5CB9C |
+| #2E5A2B | #001400 | #003800 | #001900 | #002E00 | #0E4307 | #2E5A2B | #497246 | #638B60 | #7DA57B | #98C096 | #A6CEA4 |
+| #105C39 | #001400 | #002A00 | #001C00 | #003000 | #00451F | #105C39 | #367452 | #538D6C | #6FA786 | #8BC2A1 | #99D0AF |
+| #005D47 | #000F00 | #001F00 | #002000 | #003218 | #00462F | #005D47 | #21755F | #458E79 | #63A893 | #80C3AD | #8ED1BB |
+| #005D54 | #000500 | #001400 | #002517 | #003329 | #00463D | #005D54 | #0C756C | #3C8E85 | #5DA89F | #7BC3BA | #89D1C8 |
+| #005C60 | #000006 | #000812 | #002C33 | #003237 | #00464A | #005C60 | #107478 | #3E8C91 | #5FA6AB | #7DC1C6 | #8CCFD3 |
+| #00596A | #000017 | #00001B | #00416E | #003043 | #004354 | #00596A | #287181 | #4B8A9A | #69A4B5 | #86BFD0 | #95CCDD |
+| #1D5571 | #00001D | #00001E | #810000 | #002C4D | #003F5C | #1D5571 | #406D89 | #5D86A2 | #79A0BC | #95BBD7 | #A3C8E5 |
+| #3B5075 | #000020 | #000020 | #3E0C00 | #002454 | #1D3961 | #3B5075 | #55688D | #7081A6 | #8A9BC0 | #A5B6DB | #B3C4E9 |
+| #504B76 | #000020 | #000020 | #0C2100 | #241955 | #393362 | #504B76 | #68638E | #817CA7 | #9B96C1 | #B6B1DC | #C4BFEA |
+| #604574 | #00001E | #04001E | #003000 | #3B0952 | #4B2C5F | #604574 | #785E8B | #9078A4 | #AA92BE | #C5ADD9 | #D3BBE7 |
+| #6C416D | #150018 | #18001A | #005600 | #470049 | #572658 | #6C416D | #835A85 | #9C749E | #B68EB8 | #D1A9D3 | #DFB7E1 |
+| #733E64 | #24000B | #250013 | #810060 | #4D003D | #5D234F | #733E64 | #8B587C | #A47295 | #BE8CAF | #D9A7CA | #E7B5D7 |
+| #763E59 | #2E0000 | #2F0000 | #520026 | #4D002F | #602442 | #763E59 | #8E5770 | #A87189 | #C38BA3 | #DEA6BE | #ECB4CC |
+|---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+| #893248 | #490000 | #4C0000 | #520000 | #5C0019 | #711131 | #893248 | #A34D61 | #BD677A | #D98294 | #F69DAF | #FFABBC |
+| #83392D | #550000 | #680000 | #3E0000 | #530000 | #6A1F0B | #83392D | #9D5348 | #B96C63 | #D5877D | #F1A299 | #FFAFA6 |
+| #7B4100 | #600000 | #E30000 | #320000 | #4A1100 | #622A00 | #7B4100 | #955A2B | #B0734A | #CC8D67 | #E8A883 | #F6B591 |
+| #704900 | #670000 | #002A80 | #270600 | #401C00 | #573200 | #704900 | #896100 | #A47A31 | #BF9453 | #DBAF71 | #E9BC80 |
+| #615000 | #5F0000 | #000065 | #1C0E00 | #342300 | #4A3900 | #615000 | #7A6800 | #94811B | #AF9B45 | #CAB565 | #D8C374 |
+| #505500 | #003400 | #00005F | #0E1300 | #232900 | #393E00 | #505500 | #686E00 | #818718 | #9BA143 | #B5BC64 | #C3CA73 |
+| #375A00 | #004500 | #3C0062 | #001700 | #012D00 | #1E4300 | #375A00 | #507300 | #698C2B | #83A64E | #9EC26D | #ABCF7C |
+| #005F00 | #003F00 | #730077 | #001B00 | #003100 | #004700 | #005F00 | #2B7722 | #4A9144 | #66AB61 | #82C67D | #90D48C |
+| #006224 | #003300 | #008D00 | #001F00 | #003500 | #004A00 | #006224 | #007A41 | #0E945C | #41AE77 | #63C992 | #73D7A0 |
+| #006441 | #002700 | #003800 | #002500 | #00380D | #004D28 | #006441 | #007C59 | #009673 | #00B08D | #40CBA8 | #55D9B5 |
+| #006557 | #001B00 | #002201 | #002E1C | #003A2C | #004E40 | #006557 | #007D6F | #009688 | #00B0A2 | #1FCBBD | #3FD9CA |
+| #00636A | #000B19 | #00131C | #004E5A | #003C43 | #004E54 | #00636A | #007B82 | #00949B | #00AEB5 | #26C9D0 | #44D7DE |
+| #00607A | #000024 | #000323 | #740000 | #003B59 | #004B65 | #00607A | #007791 | #0090AA | #0CAAC5 | #4CC5E0 | #60D2EE |
+| #005A86 | #000029 | #000026 | #430000 | #00366F | #004573 | #005A86 | #00719D | #288AB6 | #52A4D1 | #73BEEC | #83CCFA |
+| #1A518E | #00002B | #000027 | #2B0D00 | #002581 | #003A7C | #1A518E | #4169A5 | #5F82BD | #7B9CD8 | #97B6F3 | #A5C4FF |
+| #514590 | #00002B | #000026 | #0D1900 | #250087 | #3A2A7F | #514590 | #695FA6 | #8278BF | #9C93D9 | #B6AEF4 | #C4BCFF |
+| #6D398B | #050029 | #0B0025 | #002100 | #56007E | #5A1579 | #6D398B | #8354A1 | #9B6FBA | #B58AD4 | #D0A5F0 | #DDB3FE |
+| #7E2F81 | #220024 | #200022 | #002D00 | #660068 | #6B006E | #7E2F81 | #954C97 | #AE68B0 | #C883CA | #E39FE5 | #F1ADF3 |
+| #872A71 | #31001A | #2E001B | #004800 | #670050 | #73005D | #872A71 | #9F4889 | #B964A1 | #D47FBC | #EF9BD7 | #FDA9E4 |
+| #8A2B5E | #3E0000 | #3B000A | #900043 | #630036 | #740049 | #8A2B5E | #A34876 | #BE648F | #D97FA9 | #F59AC4 | #FFA8D2 |
+|---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+| #971F45 | #580000 | #5A0000 | #5E0000 | #680013 | #7E002D | #971F45 | #B23F5E | #CE5B77 | #EB7791 | #FF92AC | #FFA0BA |
+| #8F2F17 | #6C0000 | #940000 | #430000 | #5C0000 | #751000 | #8F2F17 | #AB4A39 | #C76455 | #E47F71 | #FF9A8D | #FFA79A |
+| #843C00 | #8D0000 | #004B85 | #340000 | #500A00 | #6A2400 | #843C00 | #A05500 | #BC6E27 | #D9884C | #F6A36B | #FFB07A |
+| #774700 | #FF0000 | #00165A | #290500 | #441A00 | #5D3000 | #774700 | #915F00 | #AD7800 | #C89118 | #E5AC49 | #F4BA5B |
+| #664F00 | #0000EB | #000050 | #1D0E00 | #362300 | #4D3900 | #664F00 | #7F6700 | #998100 | #B49A00 | #D0B52B | #DEC344 |
+| #4F5700 | #0000C3 | #00004D | #0E1300 | #232A00 | #394000 | #4F5700 | #676F00 | #818800 | #9BA300 | #B5BE26 | #C3CC40 |
+| #2D5D00 | #9600E4 | #2D004E | #001800 | #002F00 | #124500 | #2D5D00 | #477600 | #608F00 | #7AAA00 | #95C541 | #A2D354 |
+| #006200 | #00B100 | #510054 | #001C00 | #003400 | #004A00 | #006200 | #007B00 | #289515 | #4CB041 | #6ACB62 | #79D972 |
+| #006600 | #005300 | #9E0074 | #002100 | #003800 | #004F00 | #006600 | #007F2D | #00994B | #00B467 | #19CF83 | #3ADE91 |
+| #00693B | #003800 | #005400 | #002800 | #003C01 | #005221 | #00693B | #008254 | #009C6D | #00B787 | #00D2A2 | #00E0B0 |
+| #006B59 | #002600 | #002C09 | #00351F | #00412E | #005443 | #006B59 | #008371 | #009D8A | #00B7A4 | #00D2BF | #00E0CD |
+| #006A73 | #001521 | #001922 | #00FFFF | #00454E | #00555D | #006A73 | #00828A | #009BA3 | #00B5BE | #00D0D9 | #00DEE7 |
+| #006689 | #00002B | #000727 | #5B0000 | #004871 | #005376 | #006689 | #007DA0 | #0096B9 | #00B0D3 | #00CAEE | #00D8FD |
+| #005E9A | #000030 | #00002A | #3B0000 | #0047A2 | #004B8B | #005E9A | #0075B0 | #008EC9 | #00A7E3 | #3DC2FF | #55CFFF |
+| #0051A6 | #000031 | #00002A | #270D00 | #002AE7 | #003B9A | #0051A6 | #1769BA | #4782D3 | #689CED | #87B7FF | #96C4FF |
+| #513EA9 | #000031 | #00002A | #0D1700 | #2C00FF | #3B199F | #513EA9 | #6959BD | #8274D5 | #9C8FEF | #B7AAFF | #C4B8FF |
+| #7A24A2 | #0D002F | #0F0028 | #001F00 | #9700E0 | #6B0096 | #7A24A2 | #8F48B7 | #A665CF | #BF81E9 | #DA9DFF | #E8ACFF |
+| #900193 | #28002A | #230025 | #002800 | #940098 | #800083 | #900193 | #A539A9 | #BE59C1 | #D877DB | #F394F6 | #FFA2FF |
+| #9A007E | #390021 | #33001F | #003800 | #840065 | #86006A | #9A007E | #B13294 | #CB54AD | #E671C7 | #FF8EE2 | #FF9CF0 |
+| #9B0464 | #480007 | #430010 | #FF00FF | #75003E | #84004E | #9B0464 | #B5357B | #D05594 | #EC71AE | #FF8EC9 | #FF9CD7 |
+|---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+
