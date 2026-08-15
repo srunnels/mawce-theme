@@ -1914,8 +1914,10 @@ Also bind `class' to ((class color) (min-colors 89))."
     ;;    `(org-archived ((t (:foreground ,zenburn-fg :weight bold))))
     ;; Org blocks
     `(org-block ((t (:inherit fixed-pitch :background ,mawce-org-block-bg :extend t))))
-    `(org-block-begin-line ((t (:inherit fixed-pitch :overline ,mawce-mode-line-overline :foreground ,mawce-org-block-lines-fg :extend t)))) ;; :background ,mawce-org-block-lines-bg
-    `(org-block-end-line ((t (:inherit fixed-pitch :underline ,mawce-mode-line-overline :foreground ,mawce-org-block-lines-fg  :extend t)))) ;; :background ,mawce-org-block-lines-bg
+    ;; `(org-block-begin-line ((t (:inherit fixed-pitch :overline ,mawce-mode-line-overline :foreground ,mawce-org-block-lines-fg :extend t)))) ;; :background ,mawce-org-block-lines-bg
+    ;; `(org-block-end-line ((t (:inherit fixed-pitch :underline ,mawce-mode-line-overline :foreground ,mawce-org-block-lines-fg  :extend t)))) ;; :background ,mawce-org-block-lines-bg
+    `(org-block-begin-line ((t (:inherit fixed-pitch :foreground ,mawce-org-block-lines-fg :extend t)))) ;; :background ,mawce-org-block-lines-bg
+    `(org-block-end-line ((t (:inherit fixed-pitch :foreground ,mawce-org-block-lines-fg  :extend t)))) ;; :background ,mawce-org-block-lines-bg
     ;;    `(org-checkbox ((t (:background ,zenburn-bg+2 :foreground ,zenburn-fg+1
     ;;                                    :box (:line-width 1 :style released-button)))))
     `(org-code ((t (:foreground ,mawce-org-code-fg :extend t :slant italic ;; :background ,mawce-org-code-bg
