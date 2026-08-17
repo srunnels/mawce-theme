@@ -592,7 +592,8 @@ Each element has the form (NAME . HEX).
                                                      :oklch-medium "mawce-medium-background-232"
                                                      :oklch-light "mawce-light-background-202"))
     ("mawce-org-block-lines-bg"                  . '(:dark  "mawce-dark-grayviolet2+1"
-                                                     :oklch-dark "mawce-dark-background-352"
+                                                     :oklch-dark "mawce-dark-background-292"
+                                                     ;;:oklch-dark "mawce-dark-background-352"
                                                      :oklch-medium "mawce-medium-background-262"
                                                      :oklch-light "mawce-light-background-082"))
     ("mawce-org-block-lines-fg"                  . '(:dark  "mawce-dark-grayviolet2-3"
