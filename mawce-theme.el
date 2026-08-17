@@ -925,7 +925,7 @@ Also bind `class' to ((class color) (min-colors 89))."
     `(mode-line-inactive ((t (:foreground ,mawce-mode-line-buffer-id-fg
                               :background ,mawce-bg
                               :box nil;; (:line-width -1 :style released-button)
-                              :overline no))))
+                              ))))
     `(secondary-selection ((t (:background ,mawce-secondary-selection-bg))))
     ;;    `(trailing-whitespace ((t (:background ,zenburn-red))))
     ;;    `(vertical-border ((t (:foreground ,zenburn-fg))))
