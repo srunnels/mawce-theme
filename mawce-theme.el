@@ -762,6 +762,10 @@ Each element has the form (NAME . HEX).
                                                      :oklch-dark "mawce-grayscales-88"
                                                      :oklch-medium nil
                                                      :oklch-light "mawce-grayscales-18"))
+    ("mawce-mode-line-buffer-id-fg-deemph"        . '(:dark nil
+                                                     :oklch-dark "mawce-grayscales-28"
+                                                     :oklch-medium nil
+                                                     :oklch-light "mawce-grayscales-18"))
     ("mawce-mode-line-emphasis"                  . '(:dark ""
                                                      :oklch-dark ""
                                                      :oklch-medium ""
@@ -917,10 +921,11 @@ Also bind `class' to ((class color) (min-colors 89))."
                             ))
        (t :inverse-video t)))
     `(mode-line-buffer-id ((t (:foreground ,mawce-mode-line-buffer-id-fg))))
+    `(mode-line-buffer-id-deemph ((t (:foreground ,mawce-mode-line-buffer-id-fg))))
     `(mode-line-inactive ((t (:foreground ,mawce-mode-line-buffer-id-fg
                               :background ,mawce-bg
                               :box nil;; (:line-width -1 :style released-button)
-                              :overline ,mawce-mode-line-overline))))
+                              :overline no))))
     `(secondary-selection ((t (:background ,mawce-secondary-selection-bg))))
     ;;    `(trailing-whitespace ((t (:background ,zenburn-red))))
     ;;    `(vertical-border ((t (:foreground ,zenburn-fg))))
