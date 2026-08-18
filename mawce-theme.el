@@ -1,4 +1,4 @@
-;;; mawce-theme.el --- Code for my custom mode line -*- lexical-binding: t -*-
+;;; mawce-theme.el --- Code for my custom mode line -*- no-byte-compile: t; lexical-binding: t -*-
 
 ;; Copyright (C) 2024  Scott Runnels
 
