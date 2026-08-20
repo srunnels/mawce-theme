@@ -750,6 +750,10 @@ Each element has the form (NAME . HEX).
                                                      :oklch-dark "mawce-light-303"
                                                      :oklch-medium "mawce-medium-303"
                                                      :oklch-light "mawce-dark-303"))
+    ("mawce-mode-line-inactive-overline"         . '(:dark "mawce-dark-graymagenta+1"
+                                                     :oklch-dark "mawce-medium-303"
+                                                     :oklch-medium "mawce-dark-303"
+                                                     :oklch-light "mawce-light-303"))
     ("mawce-mode-line"                           . '(:dark ""
                                                      :oklch-dark ""
                                                      :oklch-medium ""
@@ -925,6 +929,7 @@ Also bind `class' to ((class color) (min-colors 89))."
     `(mode-line-inactive ((t (:foreground ,mawce-mode-line-buffer-id-fg
                               :background ,mawce-bg
                               :box nil;; (:line-width -1 :style released-button)
+                              :overline ,mawce-mode-line-inactive-overline
                               ))))
     `(secondary-selection ((t (:background ,mawce-secondary-selection-bg))))
     ;;    `(trailing-whitespace ((t (:background ,zenburn-red))))
