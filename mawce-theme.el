@@ -1986,7 +1986,7 @@ Also bind `class' to ((class color) (min-colors 89))."
      ;;    `(org-column-title ((t (:background ,zenburn-bg-1 :underline t :weight bold))))
      ;;    `(org-mode-line-clock ((t (:foreground ,zenburn-fg :background ,zenburn-bg-1))))
      ;;    `(org-mode-line-clock-overrun ((t (:foreground ,zenburn-bg :background ,zenburn-red-1))))
-     `(org-ellipsis ((t (:foreground ,mawce-org-ellipses-fg ))))
+     `(org-ellipsis ((t (:foreground ,mawce-org-ellipsis-fg ))))
      ;;    `(org-footnote ((t (:foreground ,zenburn-cyan :underline t))))
      `(org-document-title ((t (:inherit ,z-variable-pitch :foreground ,mawce-org-document-title-fg
                                         :weight bold
