@@ -681,7 +681,10 @@ Each element has the form (NAME . HEX).
     ;; ("mawce-org-mode-line-clock-bg"           . '(:dark "mawce-")
     ;; ("mawce-org-mode-line-clock-overrun-fg"   . '(:dark "mawce-")
     ;; ("mawce-org-mode-line-clock-overrun-bg"   . '(:dark "mawce-")
-    ;; ("mawce-org-ellipsis-fg"                  . '(:dark "mawce-")
+    ("mawce-org-ellipsis-fg"                  . '(:dark "mawce-"
+                                                        :oklch-dark "mawce-dark-293"
+                                                        :oklch-medium "mawce-medium-293"
+                                                        :oklch-light "mawce-light-293"))
     ;; ("mawce-org-footnote-fg"                  . '(:dark "mawce-")
     ("mawce-org-document-title-fg"               . '(:dark "mawce-dark-limegreen-2"
                                                            :oklch-dark "mawce-light-053"
@@ -1983,7 +1986,7 @@ Also bind `class' to ((class color) (min-colors 89))."
      ;;    `(org-column-title ((t (:background ,zenburn-bg-1 :underline t :weight bold))))
      ;;    `(org-mode-line-clock ((t (:foreground ,zenburn-fg :background ,zenburn-bg-1))))
      ;;    `(org-mode-line-clock-overrun ((t (:foreground ,zenburn-bg :background ,zenburn-red-1))))
-     ;;    `(org-ellipsis ((t (:foreground ,zenburn-yellow-1 :underline t))))
+     `(org-ellipsis ((t (:foreground ,mawce-org-ellipses-fg ))))
      ;;    `(org-footnote ((t (:foreground ,zenburn-cyan :underline t))))
      `(org-document-title ((t (:inherit ,z-variable-pitch :foreground ,mawce-org-document-title-fg
                                         :weight bold
