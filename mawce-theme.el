@@ -819,7 +819,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                    mawce-default-colors-plist)
          (z-variable-pitch (if mawce-use-variable-pitch
                                'variable-pitch
-			     'fixed-pitch)))
+			                 'fixed-pitch)))
      ,@body))
 
 ;;;; Faces
@@ -871,7 +871,15 @@ Also bind `class' to ((class color) (min-colors 89))."
      ;;                                       :background ,zenburn-blue))))
      ;;    `(ansi-color-white ((t (:foreground ,zenburn-fg
      ;;                                        :background ,zenburn-fg-1))))
-   ;;;;; comint
+     ;;; Breadcrumb
+     ;; breadcrumb-face
+     `(breadcrumb-face ((t (:background ,mawce-bg :weight bold))))
+     ;; breadcrumb-base-face
+     `(breadcrumb-base-face ((t (:inherit breadcrumb-face))))
+     ;; breadcrumb-project-base-face
+     ;; breadcrumb-project-leaf-face
+     ;; breadcrumb-project-crumbs-face
+     ;;;;; comint
      `(comint-highlight-input ((t (:foreground ,mawce-comint-highlight-input-fg :weight normal :slant italic))))
      ;; ;;;;; compilation
      ;;    `(compilation-column-face ((t (:foreground ,zenburn-yellow))))
