@@ -872,13 +872,12 @@ Also bind `class' to ((class color) (min-colors 89))."
      ;;    `(ansi-color-white ((t (:foreground ,zenburn-fg
      ;;                                        :background ,zenburn-fg-1))))
      ;;; Breadcrumb
-     ;; breadcrumb-face
      `(breadcrumb-face ((t (:background ,mawce-bg :weight bold))))
-     ;; breadcrumb-base-face
-     `(breadcrumb-base-face ((t (:inherit breadcrumb-face))))
-     ;; breadcrumb-project-base-face
-     ;; breadcrumb-project-leaf-face
-     ;; breadcrumb-project-crumbs-face
+     `(breadcrumb-imenu-leaf-face ((t (:inherit breadcrumb-face))))
+     `(breadcrumb-imenu-crumbs-face ((t (:inherit breadcrumb-face))))
+     `(breadcrumb-project-base-face ((t (:inherit breadcrumb-face))))
+     `(breadcrumb-project-leaf-face ((t (:inherit breadcrumb-face))))
+     `(breadcrumb-project-crumbs-face ((t (:inherit breadcrumb-face))))
      ;;;;; comint
      `(comint-highlight-input ((t (:foreground ,mawce-comint-highlight-input-fg :weight normal :slant italic))))
      ;; ;;;;; compilation
