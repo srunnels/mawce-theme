@@ -844,6 +844,7 @@ Also bind `class' to ((class color) (min-colors 89))."
      ;;                            ))))
      `(fringe ((t ( :inherit mawce-bg ;; :foreground ,mawce-fringe-fg
                     ))))
+     `(header-line ((t (:background ,mawce-bg))))
      ;; `(header-line ((t (:foreground ,mawce-blue
      ;;                                :background ,mawce-bg-1
      ;;                                :box (:line-width -1 :style released-button)
