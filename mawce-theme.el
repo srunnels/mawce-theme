@@ -1957,25 +1957,21 @@ Also bind `class' to ((class color) (min-colors 89))."
      `(org-headline-done ((t (:foreground ,mawce-org-headline-done-fg :slant italic))))
      ;;    `(org-hide ((t (:foreground ,zenburn-bg))))
      `(org-level-1 ((t ( :foreground ,mawce-org-level-1-fg
-                         :inherit fixed-pitch
                          ,@(when mawce-scale-org-headlines
                              (list :height mawce-height-plus-4))))))
      `(org-level-2 ((t ( :foreground ,mawce-org-level-2-fg
-                         :inherit fixed-pitch
                          ,@(when mawce-scale-org-headlines
                              (list :height mawce-height-plus-3))))))
      `(org-level-3 ((t ( :foreground ,mawce-org-level-3-fg
-                         :inherit fixed-pitch
                          ,@(when mawce-scale-org-headlines
                              (list :height mawce-height-plus-2))))))
      `(org-level-4 ((t ( :foreground ,mawce-org-level-4-fg
-                         :inherit fixed-pitch
                          ,@(when mawce-scale-org-headlines
                              (list :height mawce-height-plus-1))))))
-     `(org-level-5 ((t ( :foreground ,mawce-org-level-5-fg :inherit fixed-pitch))))
-     `(org-level-6 ((t ( :foreground ,mawce-org-level-6-fg :inherit fixed-pitch))))
-     `(org-level-7 ((t ( :foreground ,mawce-org-level-7-fg :inherit fixed-pitch))))
-     `(org-level-8 ((t ( :foreground ,mawce-org-level-8-fg :inherit fixed-pitch))))
+     `(org-level-5 ((t ( :foreground ,mawce-org-level-5-fg))))
+     `(org-level-6 ((t ( :foreground ,mawce-org-level-6-fg))))
+     `(org-level-7 ((t ( :foreground ,mawce-org-level-7-fg))))
+     `(org-level-8 ((t ( :foreground ,mawce-org-level-8-fg))))
      `(org-link ((t (:foreground ,mawce-org-link-fg :underline t))))
      `(org-meta-line ((t (:inherit fixed-pitch :foreground ,mawce-org-meta-line-fg))))
      ;; `(org-modern-date-inactive ((t (:inherit (fixed-pitch org-modern-date-inactive)))))
